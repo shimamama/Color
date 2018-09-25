@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -11,13 +12,17 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.test.shindan.MainActivity">
+    tools:context="com.test.color.MainActivity">
 
     <TextView
+        android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="色診断"
-        android:textSize="50sp" />
+        android:text="Color Diagnosis"
+        android:textAllCaps="false"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:fontFamily="casual" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -28,8 +33,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame_style"
         android:onClick="onStart"
-        android:text="はじめ"
-        android:textSize="30sp" />
+        android:text="start"
+        android:textColor="#5d5d5d"
+        android:textSize="30sp"
+        android:typeface="monospace" />
 
 </LinearLayout>

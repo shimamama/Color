@@ -41,7 +41,7 @@ public class PlayActivity extends AppCompatActivity {
         r++;
 
         if (count > 0) {
-            ((TextView) findViewById(R.id.tvCount)).setText("後" + count + "問");
+            ((TextView) findViewById(R.id.tvCount)).setText("残り" + count + "問");
             // 出題  *********************************
             ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);
 
@@ -59,7 +59,7 @@ public class PlayActivity extends AppCompatActivity {
         count--;
         r++;
         if (count > 0) {
-            ((TextView) findViewById(R.id.tvCount)).setText("後" + count + "問");
+            ((TextView) findViewById(R.id.tvCount)).setText("残り" + count + "問");
             // 出題   ************************************
 
             ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);

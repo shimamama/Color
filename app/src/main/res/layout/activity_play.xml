@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_play"
     android:layout_width="match_parent"
@@ -9,23 +10,25 @@
     android:paddingLeft="64dp"
     android:paddingRight="64dp"
     android:paddingTop="16dp"
-    tools:context="com.test.shindan.PlayActivity">
+    tools:context="com.test.color.PlayActivity">
 
     <TextView
         android:id="@+id/tvCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="後3問" />
+        android:text="後3問"
+        app:fontFamily="casual" />
 
     <TextView
-        android:gravity="center"
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="center"
         android:text="かわいいものが好き"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        app:fontFamily="casual" />
 
     <LinearLayout
 
@@ -34,22 +37,24 @@
         android:layout_alignParentBottom="true">
 
         <Button
-            android:padding="10dp"
-            android:onClick="onYes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="はい"
-            android:textSize="40sp" />
+            android:onClick="onYes"
+            android:padding="10dp"
+            android:text="YES"
+            android:textSize="40sp"
+            android:typeface="monospace" />
 
         <Button
-            android:padding="10dp"
-            android:onClick="onNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="いいえ"
-            android:textSize="40sp" />
+            android:onClick="onNo"
+            android:padding="10dp"
+            android:text="NO"
+            android:textSize="40sp"
+            android:typeface="monospace" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -11,7 +11,7 @@
     android:paddingLeft="64dp"
     android:paddingRight="64dp"
     android:paddingTop="16dp"
-    tools:context="com.test.shindan.ResultActivity">
+    tools:context="com.test.color.ResultActivity">
 
     <TextView
         android:layout_width="wrap_content"
