@@ -10,19 +10,20 @@ import com.test.color.R;
 
 public class PlayActivity extends AppCompatActivity {
 
-    // 問題 *** 上から順に問1～  **************************************
+    // 問題 *** 上から順に問1～  *************************
     String[] question = {
             "甘いものが好き",
             "食事より睡眠",
             "インドア派",
     };
 
-    // yesの時の加点　*******************************
+    // yesの時の加点　
+    // 2進数で考える  **********************************
     int[] yes = {1, 2, 4};
 
     int r = 0;  //問題番号
     int count = 3;  // 問題数
-    int score = 0;   // スコアの合計（評価点）
+    int score = 0;   // スコア
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
