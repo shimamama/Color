@@ -17,14 +17,15 @@ public class PlayActivity extends AppCompatActivity {
             "甘いものが好き",
             "食事より睡眠",
             "インドア派",
+            "朝型というより夜型",
     };
 
     // yesの時の加点　
     // 2進数で考える  **********************************
-    int[] yes = {1, 2, 4};
+    int[] yes = {1, 2, 4, 8};
 
     int r = 0;  //問題番号
-    int count = 3;  // 問題数カウント
+    int count = 4;  // 問題数カウント
     int score = 0;   // スコア
     int bcount = 0;  //Buttonカウント　"0"だったらBACKボタン非表示(無効)
 
