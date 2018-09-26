@@ -1,6 +1,7 @@
 package com.test.color;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -29,6 +30,23 @@ public class PlayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+
+        //フォント追加  *******************************************
+        TextView txt3 = (TextView) findViewById(R.id.tvCount);
+        Typeface font3 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt3.setTypeface(font3);
+
+        TextView txt4 = (TextView) findViewById(R.id.tvQuestion);
+        Typeface font4 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt4.setTypeface(font4);
+
+        TextView txt5 = (TextView) findViewById(R.id.yes_button);
+        Typeface font5 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt5.setTypeface(font5);
+
+        TextView txt6 = (TextView) findViewById(R.id.no_button);
+        Typeface font6 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt6.setTypeface(font6);
 
         // 出題   ***********************************
         ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);

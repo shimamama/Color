@@ -1,5 +1,6 @@
 package com.test.color;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -11,7 +12,7 @@ public class ResultActivity extends AppCompatActivity {
 
     String[] result = {
             "月白",
-            "深縹",
+            "花紺青",
             "花録色",
             "濡羽色",
             "百塩茶",
@@ -22,7 +23,7 @@ public class ResultActivity extends AppCompatActivity {
 
     String[] reTest = {
             "geppaku",
-            "kokihanada",
+            "hanakonjou",
             "hanarokusho",
             "nureba-iro",
             "momoshiocha",
@@ -33,7 +34,7 @@ public class ResultActivity extends AppCompatActivity {
 
     int[] reImg = {
             R.drawable.geppaku,
-            R.drawable.kokihanada,
+            R.drawable.hanakonjou,
             R.drawable.hanarokusho,
             R.drawable.nureba_iro,
             R.drawable.momoshiocha,
@@ -47,6 +48,18 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        TextView txt8 = (TextView) findViewById(R.id.kekka);
+        Typeface font8 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt8.setTypeface(font8);
+
+        TextView txt9 = (TextView) findViewById(R.id.tvResult);
+        Typeface font9 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt9.setTypeface(font9);
+
+        TextView txt0 = (TextView) findViewById(R.id.tvReText);
+        Typeface font0 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt0.setTypeface(font0);
 
         // インテントからスコアを取得    **************************
         int score = getIntent().getIntExtra("score" , 0);

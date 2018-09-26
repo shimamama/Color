@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //タイトルとボタンにフォント追加  ******************************
         TextView txt = (TextView) findViewById(R.id.title_text);
         Typeface font = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
         txt.setTypeface(font);
