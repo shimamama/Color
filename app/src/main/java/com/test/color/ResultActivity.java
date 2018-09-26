@@ -91,6 +91,10 @@ public class ResultActivity extends AppCompatActivity {
         Typeface font01 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
         txt01.setTypeface(font01);
 
+        TextView txt02 = (TextView) findViewById(R.id.startscreen_button);
+        Typeface font02 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt02.setTypeface(font02);
+
         // インテントからスコアを取得    **************************
         int score = getIntent().getIntExtra("score" , 0);
         if( score < 0) score = 0;
@@ -104,6 +108,11 @@ public class ResultActivity extends AppCompatActivity {
 
     public void onAgain(View v){
         Intent intent = new Intent(this,PlayActivity.class);
+        startActivity(intent);
+    }
+
+    public void onStartscreen(View v){
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }
