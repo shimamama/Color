@@ -106,11 +106,13 @@ public class ResultActivity extends AppCompatActivity {
         ((ImageView)findViewById(R.id.ivReImg)).setImageResource(reImg[score]);
     }
 
+    //もう一度診断する　Button　****************************************
     public void onAgain(View v){
         Intent intent = new Intent(this,PlayActivity.class);
         startActivity(intent);
     }
 
+    //スタート画面に戻る　Button　　**************************************
     public void onStartscreen(View v){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
