@@ -18,11 +18,10 @@
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Color Diagnosis"
+        android:text="和色診断"
         android:textAllCaps="false"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:fontFamily="casual" />
+        android:textSize="55sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -31,14 +30,15 @@
         android:src="@drawable/main" />
 
     <Button
+        android:id="@+id/title_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/frame_style"
         android:onClick="onStart"
-        android:text="start"
+        android:text="はじめ"
         android:textColor="#5d5d5d"
-        android:textSize="30sp"
+        android:textSize="27sp"
         android:typeface="monospace" />
 
 </LinearLayout>
