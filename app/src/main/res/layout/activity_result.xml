@@ -41,4 +41,15 @@
         android:layout_height="wrap_content"
         android:src="@drawable/geppaku" />
 
+    <Button
+        android:id="@+id/again_button"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/frame_style"
+        android:onClick="onAgain"
+        android:text="もう一度診断する"
+        android:textColor="#5d5d5d"
+        android:textSize="18sp" />
+
 </LinearLayout>

@@ -1,8 +1,10 @@
 package com.test.color;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -85,6 +87,10 @@ public class ResultActivity extends AppCompatActivity {
         Typeface font0 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
         txt0.setTypeface(font0);
 
+        TextView txt01 = (TextView) findViewById(R.id.again_button);
+        Typeface font01 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt01.setTypeface(font01);
+
         // インテントからスコアを取得    **************************
         int score = getIntent().getIntExtra("score" , 0);
         if( score < 0) score = 0;
@@ -94,5 +100,10 @@ public class ResultActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.tvResult)).setText(result[score]);
         ((TextView)findViewById(R.id.tvReText)).setText(reTest[score]);
         ((ImageView)findViewById(R.id.ivReImg)).setImageResource(reImg[score]);
+    }
+
+    public void onAgain(View v){
+        Intent intent = new Intent(this,PlayActivity.class);
+        startActivity(intent);
     }
 }
