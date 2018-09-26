@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/tvQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
@@ -31,32 +31,56 @@
         app:fontFamily="casual" />
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/yes_button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onYes"
-            android:padding="10dp"
-            android:text="YES"
-            android:textSize="40sp"
-            android:typeface="monospace" />
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/yes_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/frame_style2"
+                android:onClick="onYes"
+                android:padding="10dp"
+                android:text="YES"
+                android:textSize="37sp" />
+
+            <Button
+                android:id="@+id/no_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/frame_style2"
+                android:onClick="onNo"
+                android:padding="10dp"
+                android:text="NO"
+                android:textSize="37sp" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/no_button"
+            android:id="@+id/back_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onNo"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/frame_style2"
+            android:onClick="onBack"
             android:padding="10dp"
-            android:text="NO"
-            android:textSize="40sp"
-            android:typeface="monospace" />
+            android:text="BACK"
+            android:textSize="35sp" />
     </LinearLayout>
+
+
 
 </RelativeLayout>

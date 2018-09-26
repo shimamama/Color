@@ -26,19 +26,19 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:cropToPadding="false"
         android:src="@drawable/main" />
 
     <Button
         android:id="@+id/title_start"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/frame_style"
         android:onClick="onStart"
         android:text="はじめ"
         android:textColor="#5d5d5d"
-        android:textSize="27sp"
-        android:typeface="monospace" />
+        android:textSize="27sp" />
 
 </LinearLayout>

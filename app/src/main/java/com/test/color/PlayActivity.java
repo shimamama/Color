@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.test.color.R;
@@ -23,8 +24,9 @@ public class PlayActivity extends AppCompatActivity {
     int[] yes = {1, 2, 4};
 
     int r = 0;  //問題番号
-    int count = 3;  // 問題数
+    int count = 3;  // 問題数カウント
     int score = 0;   // スコア
+    int bcount = 0;  //Buttonカウント　"0"だったらBACKボタン非表示(無効)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +50,15 @@ public class PlayActivity extends AppCompatActivity {
         Typeface font6 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
         txt6.setTypeface(font6);
 
+        TextView txt7 = (TextView) findViewById(R.id.back_button);
+        Typeface font7 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt7.setTypeface(font7);
+
         // 出題   ***********************************
         ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);
-        //r = r+1; //次の問いを表示
+
+        //backButton非表示
+        findViewById(R.id.back_button).setVisibility(View.INVISIBLE);
     }
 
     // Yesボタン   **********************************
@@ -58,6 +66,9 @@ public class PlayActivity extends AppCompatActivity {
         count--;
         score += yes[r]; // スコアの加算
         r++;
+        bcount++;
+
+        findViewById(R.id.back_button).setVisibility(View.VISIBLE);
 
         if (count > 0) {
             ((TextView) findViewById(R.id.tvCount)).setText("残り" + count + "問");
@@ -77,11 +88,15 @@ public class PlayActivity extends AppCompatActivity {
     public void onNo(View v) {
         count--;
         r++;
+        bcount++;
+
+        findViewById(R.id.back_button).setVisibility(View.VISIBLE);
+
         if (count > 0) {
             ((TextView) findViewById(R.id.tvCount)).setText("残り" + count + "問");
             // 出題   ************************************
-
             ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);
+
         } else {
             Intent intent = new Intent(this, ResultActivity.class);
             intent.putExtra("score" , score);
@@ -89,4 +104,27 @@ public class PlayActivity extends AppCompatActivity {
             finish();
         }
     }
+
+    //backボタン　質問と加点を一つ戻す ******************************
+    public void onBack(View v){
+
+        bcount--;
+
+        if (bcount == 0){
+            findViewById(R.id.back_button).setVisibility(View.INVISIBLE);
+        }
+
+        count++;
+        r--;
+        score -= yes[r];
+        ((TextView) findViewById(R.id.tvCount)).setText("残り" + count + "問");
+        // 出題   ************************************
+        ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);
+
+    }
 }
+
+
+
+
+
