@@ -64,4 +64,15 @@
         android:textColor="#5d5d5d"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/go_exp_button"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/frame_style"
+        android:onClick="onExp"
+        android:text="この色の説明へ"
+        android:textColor="#5d5d5d"
+        android:textSize="18sp" />
+
 </LinearLayout>

@@ -18,7 +18,7 @@ public class ResultActivity extends AppCompatActivity {
             "濡羽色",
             "花紺青",
             "孔雀緑",
-            "琥珀色",
+            "蜜柑色",
             "百塩茶",
             "月白",
             "支子色",
@@ -28,7 +28,7 @@ public class ResultActivity extends AppCompatActivity {
             "唐紅",
             "梅重",
             "天色",
-            "花録色",
+            "花録青",
     };
 
     String[] reTest = {
@@ -37,7 +37,7 @@ public class ResultActivity extends AppCompatActivity {
             "Nureba_iro",
             "Hanakonjou",
             "Kujakumidori",
-            "Kohaku_iro",
+            "Mikan_iro",
             "Momoshiocha",
             "Geppaku",
             "Kuchinashi_iro",
@@ -53,10 +53,10 @@ public class ResultActivity extends AppCompatActivity {
     int[] reImg = {
             R.drawable.hakudou,
             R.drawable.shion_iro,
-            R.drawable.nureba_iro,
+            R.drawable.nurebairo,
             R.drawable.hanakonjou,
             R.drawable.kujakumidori,
-            R.drawable.kohaku,
+            R.drawable.mikaniro,
             R.drawable.momoshiocha,
             R.drawable.geppaku,
             R.drawable.kuchinashiiro,
@@ -68,6 +68,8 @@ public class ResultActivity extends AppCompatActivity {
             R.drawable.amairo,
             R.drawable.hanarokusho,
     };
+
+    int score1;
 
 
     @Override
@@ -95,6 +97,10 @@ public class ResultActivity extends AppCompatActivity {
         Typeface font02 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
         txt02.setTypeface(font02);
 
+        TextView txt03 = (TextView) findViewById(R.id.go_exp_button);
+        Typeface font03 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
+        txt03.setTypeface(font03);
+
         // インテントからスコアを取得    **************************
         int score = getIntent().getIntExtra("score" , 0);
         if( score < 0) score = 0;
@@ -106,15 +112,23 @@ public class ResultActivity extends AppCompatActivity {
         ((ImageView)findViewById(R.id.ivReImg)).setImageResource(reImg[score]);
     }
 
-    //もう一度診断する　Button　****************************************
+    //もう一度診断する　　****************************************
     public void onAgain(View v){
         Intent intent = new Intent(this,PlayActivity.class);
         startActivity(intent);
     }
 
-    //スタート画面に戻る　Button　　**************************************
+    //スタート画面に戻る　　**************************************
     public void onStartscreen(View v){
         Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    //説明画面へ　　*********************************************
+    public void onExp(View v){
+        score1 = getIntent().getIntExtra("score", 0);
+        Intent intent = new Intent(this,ExplanationActivity.class);
+        intent.putExtra("score" , score1);
         startActivity(intent);
     }
 }

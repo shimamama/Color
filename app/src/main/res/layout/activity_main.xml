@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:cropToPadding="false"
-        android:src="@drawable/main" />
+        android:src="@drawable/maincp2" />
 
     <Button
         android:id="@+id/title_start"
