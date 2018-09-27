@@ -29,7 +29,7 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="伝統色のいろは\nいらすとや\npinterest"/>
+        android:text="(敬称略)\n伝統色のいろは\nいらすとや\npinterest"/>
 
     <TextView
         android:id="@+id/credit_text1"
