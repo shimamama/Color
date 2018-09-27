@@ -69,6 +69,7 @@ public class ResultActivity extends AppCompatActivity {
             R.drawable.hanarokusho,
     };
 
+    //Explanationで取得する用のscore
     int score1;
 
 
@@ -82,24 +83,19 @@ public class ResultActivity extends AppCompatActivity {
         txt8.setTypeface(font8);
 
         TextView txt9 = (TextView) findViewById(R.id.tvResult);
-        Typeface font9 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt9.setTypeface(font9);
+        txt9.setTypeface(font8);
 
         TextView txt0 = (TextView) findViewById(R.id.tvReText);
-        Typeface font0 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt0.setTypeface(font0);
+        txt0.setTypeface(font8);
 
         TextView txt01 = (TextView) findViewById(R.id.again_button);
-        Typeface font01 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt01.setTypeface(font01);
+        txt01.setTypeface(font8);
 
         TextView txt02 = (TextView) findViewById(R.id.startscreen_button);
-        Typeface font02 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt02.setTypeface(font02);
+        txt02.setTypeface(font8);
 
         TextView txt03 = (TextView) findViewById(R.id.go_exp_button);
-        Typeface font03 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt03.setTypeface(font03);
+        txt03.setTypeface(font8);
 
         // インテントからスコアを取得    **************************
         int score = getIntent().getIntExtra("score" , 0);

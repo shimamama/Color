@@ -24,10 +24,10 @@ public class PlayActivity extends AppCompatActivity {
     // 2進数で考える  **********************************
     int[] yes = {1, 2, 4, 8};
 
-    int r = 0;  //問題番号
+    int r = 0;  // 問題番号
     int count = 4;  // 問題数カウント
     int score = 0;   // スコア
-    int bcount = 0;  //Buttonカウント　"0"だったらBACKボタン非表示(無効)
+    int bcount = 0;  // Buttonカウント　"0"だったらBACKボタン非表示(無効)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,20 +40,16 @@ public class PlayActivity extends AppCompatActivity {
         txt3.setTypeface(font3);
 
         TextView txt4 = (TextView) findViewById(R.id.tvQuestion);
-        Typeface font4 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt4.setTypeface(font4);
+        txt4.setTypeface(font3);
 
         TextView txt5 = (TextView) findViewById(R.id.yes_button);
-        Typeface font5 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt5.setTypeface(font5);
+        txt5.setTypeface(font3);
 
         TextView txt6 = (TextView) findViewById(R.id.no_button);
-        Typeface font6 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt6.setTypeface(font6);
+        txt6.setTypeface(font3);
 
         TextView txt7 = (TextView) findViewById(R.id.back_button);
-        Typeface font7 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt7.setTypeface(font7);
+        txt7.setTypeface(font3);
 
         // 出題   ***********************************
         ((TextView) findViewById(R.id.tvQuestion)).setText(question[r]);
@@ -69,6 +65,7 @@ public class PlayActivity extends AppCompatActivity {
         r++;
         bcount++;
 
+        //Back Button  *************************************************
         findViewById(R.id.back_button).setVisibility(View.VISIBLE);
 
         if (count > 0) {
@@ -91,6 +88,7 @@ public class PlayActivity extends AppCompatActivity {
         r++;
         bcount++;
 
+        //BACK Button  ****************************************************
         findViewById(R.id.back_button).setVisibility(View.VISIBLE);
 
         if (count > 0) {

@@ -145,8 +145,7 @@ public class ExplanationActivity extends AppCompatActivity {
         txt04.setTypeface(font04);
 
         TextView txt05 = (TextView) findViewById(R.id.back_start_button);
-        Typeface font05 = Typeface.createFromAsset(getAssets(), "shirokuma.otf");
-        txt05.setTypeface(font05);
+        txt05.setTypeface(font04);
 
         //取得　*********************************************
         int score = getIntent().getIntExtra("score" , 0);

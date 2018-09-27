@@ -41,4 +41,15 @@
         android:textColor="#5d5d5d"
         android:textSize="27sp" />
 
+    <Button
+        android:id="@+id/credit"
+        android:layout_width="132dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame_style"
+        android:onClick="onCredit"
+        android:text="クレジット"
+        android:textColor="#5d5d5d"
+        android:textSize="20sp" />
+
 </LinearLayout>

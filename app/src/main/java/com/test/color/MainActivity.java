@@ -27,13 +27,20 @@ public class MainActivity extends AppCompatActivity {
         txt.setTypeface(font);
 
         Button txt2 = (Button) findViewById(R.id.title_start);
-        Typeface font2 = Typeface.createFromAsset(getAssets(),"shirokuma.otf");
-        txt2.setTypeface(font2);
+        txt2.setTypeface(font);
+
+        Button txt21 = (Button) findViewById(R.id.credit);
+        txt21.setTypeface(font);
     }
 
     // 画面切り替え  **********************************
     public void onStart(View v){
         Intent intent = new Intent(this,PlayActivity.class);
+        startActivity(intent);
+    }
+
+    public void onCredit(View v){
+        Intent intent = new Intent(this,CreditActivity.class);
         startActivity(intent);
     }
 }

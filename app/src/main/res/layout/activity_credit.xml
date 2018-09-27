@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.test.color.CreditActivity">
+
+    <TextView
+        android:id="@+id/credit_text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="素材・説明文"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/credit_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="伝統色のいろは\nいらすとや\npinterest"/>
+
+    <TextView
+        android:id="@+id/credit_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="※いらすとや、pinterestの素材を加工して使用しています" />
+
+    <TextView
+        android:id="@+id/credit_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="※伝統色のいろはの説明文を改変して使用しています" />
+
+    <Button
+        android:id="@+id/back_start_button2"
+        android:layout_width="221dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/frame_style"
+        android:onClick="onBs"
+        android:text="スタート画面に戻る"
+        android:textColor="#5d5d5d"
+        android:textSize="18sp" />
+
+</LinearLayout>
