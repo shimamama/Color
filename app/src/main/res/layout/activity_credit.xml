@@ -29,7 +29,7 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="(敬称略)\n伝統色のいろは\nいらすとや\npinterest"/>
+        android:text="(敬称略)\n伝統色のいろは\nいらすとや\npixiv(by しゃむ)"/>
 
     <TextView
         android:id="@+id/credit_text1"
@@ -38,7 +38,7 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:text="※いらすとや、pinterestの素材を加工して使用しています" />
+        android:text="※いらすとや、pixivの素材を加工して使用しています" />
 
     <TextView
         android:id="@+id/credit_text3"
