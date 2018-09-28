@@ -16,7 +16,7 @@ import com.test.color.R;
 public class ResultActivity extends AppCompatActivity {
 
     String[] result = {
-            "白銅",
+            "銀色",
             "紫苑色",
             "濡羽色",
             "花紺青",
@@ -35,7 +35,7 @@ public class ResultActivity extends AppCompatActivity {
     };
 
     String[] reTest = {
-            "Hakudou",
+            "gin_iro",
             "Shion_iro",
             "Nureba_iro",
             "Hanakonjou",
@@ -54,7 +54,7 @@ public class ResultActivity extends AppCompatActivity {
     };
 
     int[] reImg = {
-            R.drawable.hakudou,
+            R.drawable.gin_iro,
             R.drawable.shion_iro,
             R.drawable.nurebairo,
             R.drawable.hanakonjou,
