@@ -35,5 +35,6 @@ public class CreditActivity extends AppCompatActivity {
     public void onBs(View v){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }

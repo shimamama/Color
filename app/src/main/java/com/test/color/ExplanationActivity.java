@@ -134,6 +134,9 @@ public class ExplanationActivity extends AppCompatActivity {
             R.drawable.harokus,
     };
 
+    //前の画面に戻ったとき値を保存したまま状態にしておく用
+    int score2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,6 +149,9 @@ public class ExplanationActivity extends AppCompatActivity {
 
         TextView txt05 = (TextView) findViewById(R.id.back_start_button);
         txt05.setTypeface(font04);
+
+        TextView txt06 = (TextView) findViewById(R.id.back_result_button);
+        txt06.setTypeface(font04);
 
         //取得　*********************************************
         int score = getIntent().getIntExtra("score" , 0);
@@ -161,5 +167,15 @@ public class ExplanationActivity extends AppCompatActivity {
     public void onBst(View v){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        finish();
+    }
+
+    //前の画面へ戻る  *********************************************
+    public void onBre(View v){
+        score2 = getIntent().getIntExtra("score", 0);
+        Intent intent = new Intent(this,ResultActivity.class);
+        intent.putExtra("score" , score2);
+        startActivity(intent);
+        finish();
     }
 }

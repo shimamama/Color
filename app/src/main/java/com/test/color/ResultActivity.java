@@ -112,12 +112,14 @@ public class ResultActivity extends AppCompatActivity {
     public void onAgain(View v){
         Intent intent = new Intent(this,PlayActivity.class);
         startActivity(intent);
+        finish();
     }
 
     //スタート画面に戻る　　**************************************
     public void onStartscreen(View v){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     //説明画面へ　　*********************************************
@@ -126,5 +128,6 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ExplanationActivity.class);
         intent.putExtra("score" , score1);
         startActivity(intent);
+        finish();
     }
 }

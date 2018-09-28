@@ -53,7 +53,7 @@
                 android:onClick="onYes"
                 android:padding="10dp"
                 android:text="YES"
-                android:textSize="37sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/no_button"
@@ -65,7 +65,7 @@
                 android:onClick="onNo"
                 android:padding="10dp"
                 android:text="NO"
-                android:textSize="37sp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -78,7 +78,7 @@
             android:onClick="onBack"
             android:padding="10dp"
             android:text="BACK"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
 

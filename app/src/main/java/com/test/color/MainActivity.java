@@ -37,10 +37,13 @@ public class MainActivity extends AppCompatActivity {
     public void onStart(View v){
         Intent intent = new Intent(this,PlayActivity.class);
         startActivity(intent);
+        finish();
     }
 
+    //クレジット画面  *************************************
     public void onCredit(View v){
         Intent intent = new Intent(this,CreditActivity.class);
         startActivity(intent);
+        finish();
     }
 }
